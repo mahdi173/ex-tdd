@@ -57,14 +57,14 @@ function deliveryFees(total){
 }
 
 function genererRecapitulatif(cart){
-    const totalTTC = totalTTC(cart);
-    const deliveryFees = totalTTC(totalTTC);
-    const totalDelivery = totalTTC + deliveryFees;
+    const total = totalTTC(cart);
+    const fees = deliveryFees(total);
+    const totalDelivery = total + fees;
 
 
     return [
-        totalTTC,
-        deliveryFees,
+        total,
+        fees,
         totalDelivery
     ];
 }

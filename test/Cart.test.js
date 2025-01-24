@@ -108,8 +108,8 @@ describe("When I try to submit my cat I get delivery fees", () => {
         const resultat = genererRecapitulatif([article1]);
         expect(resultat).toEqual({
             total: 20,
-            fraisLivraison: 10,
-            totalAvecLivraison: 30,
+            fees: 10,
+            totalDelivery: 30,
         });
     });
 
@@ -119,8 +119,8 @@ describe("When I try to submit my cat I get delivery fees", () => {
         const resultat = genererRecapitulatif([article1, article2]);
         expect(resultat).toEqual({
             total: 50,
-            fraisLivraison: 5,
-            totalAvecLivraison: 55,
+            fees: 5,
+            totalDelivery: 55,
         });
     });
 
@@ -130,8 +130,8 @@ describe("When I try to submit my cat I get delivery fees", () => {
         const resultat = genererRecapitulatif([article1, article2]);
         expect(resultat).toEqual({
             total: 140,
-            fraisLivraison: 0,
-            totalAvecLivraison: 140,
+            fees: 0,
+            totalDelivery: 140,
         });
     });
 });
